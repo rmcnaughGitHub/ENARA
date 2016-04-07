@@ -1,0 +1,207 @@
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: 'Duru Sans', Arial, sans-serif;
+  font-size: 20px;
+  line-height: 37px;
+  margin: 0;
+  padding: 0; 
+}
+
+div {
+  outline: 1px solid #f00;
+}
+
+h1 {
+  font-size: 36px;
+  text-transform: uppercase; 
+}
+
+img {
+  border: 0;
+  outline: none; }
+
+* {
+  box-sizing: border-box;
+  margin-top: 0; 
+}
+
+/*MAIN STYLES - MOBILE*/
+.size-25 {
+  display: block;
+  float: left;
+  width: 25%; 
+}
+
+.size-31 {
+  display: block;
+  float: left;
+  width: 31%; 
+}
+
+.size-33 {
+  display: block;
+  float: left;
+  height: 500px;
+  width: 33.333333%; 
+}
+
+.size-100 {
+  float: left;
+  width: 100%; 
+}
+
+.size-50 {
+  float: left;
+  width: 50%; 
+}
+
+
+/* UTILITY STYLES */
+.style-bold {
+  font-weight: 900; 
+}
+
+.outline {
+  outline: 1px solid; 
+}
+
+.outline-red {
+  color: #ff0000; 
+}
+
+.type-18 {
+  font-size: 18px; 
+}
+
+.type-demi-bold {
+  font-weight: 400; 
+}
+
+.text-center {
+  text-align: center;
+}
+
+.vert-align-middle {
+  vertical-align: middle;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.overlay {
+  bottom: 0;
+  background-color: #000;
+  display: none;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  opacity: .5;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 98;
+}
+/* UTILITY STYLES END */
+
+
+/*NAVIGATION*/
+.navTop {
+  background-color: #999;
+  display: inline-block;
+  height: 45px;
+  left: 0;
+  line-height: 45px;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  text-decoration: none;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav ul {
+  display: inline;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+
+.nav li {
+  background-color: #999;
+  height: 45px;
+  line-height: 45px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav li:hover, .navMenu:hover {
+  background-color: #ff4719;
+}
+
+.nav-hidden {
+  margin: -500px 0 0 0 !important;
+}
+
+.nav-pos {
+  margin: 45px 0 0 0;
+}
+/*NAVIGATION END*/
+
+
+/* SITE */
+.outer-container {
+  display: block;
+  float: left;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  width: 100%; 
+}
+
+.container {
+  display: inline-block;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  width: 100%; 
+}
+
+.enara-text {
+  line-height: 20px;
+  font-size: 16px;
+  padding: 15px;
+}
+
+.hero-image {
+  background: url("../img/Enara-hero.jpg") no-repeat;
+  background-size: cover;
+  display: inline-block;
+  min-height: 250px;
+  width: 100%; 
+}
+
+.vid-container, iframe {
+  display: inline-block;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.vid {
+  display: inline-block;
+  min-height: 323px;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+
