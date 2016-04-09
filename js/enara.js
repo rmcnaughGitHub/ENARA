@@ -11,7 +11,7 @@ var run = (function (){
     openNav = false,
     //for anchor scroll, Adjusted when header becomes fixed in mobile view
     vid = document.getElementById('vid'),//video
-    $navMenu = $('.navMenu'),
+    $navMenu = $('.navTop'),
     $navAbout = $('.navAbout'),
     $navAudio = $('.navAudio'),
     $navVideo = $('.navVideo'),
@@ -41,33 +41,70 @@ var run = (function (){
   var mouseEvents = function(){
 
     ///NAV MENU
-    $('.navMenu').on('click', function (e){
+    $('.navTop').on('click', function (e){
         e.preventDefault();
         if( openNav == false ){
           openNav = true;
-          $('.sticky-nav-menu').removeClass('nav-hidden');
+          $('#nav-hidden').animate({'margin-top': '0'}, 200, 'swing');
           $('.overlay').css({'display':'block'});
           $('body, html').css({'overflow':'hidden'});
-          navOpen();
           console.log('menu-open');
         }else {
           openNav = false;
-          $('.sticky-nav-menu').addClass('nav-hidden');
+          $('#nav-hidden').animate({'margin-top': '-230px'}, 200, 'swing');
           $('.overlay').css({'display':'none'});
           $('body, html').css({'overflow':'scroll'});
           console.log('menu-closed');
         }
     });
+
+    $('#myDiv').animate(
+    { opacity: 0 }, // what we are animating
+    'fast', // how fast we are animating
+    'swing', // the type of easing
+    function() { // the callback
+        alert('done');
+    });
+
+    ///SCROLL TO SECTIONS
+    $('a').on('click', function(e){
+      
+      e.preventDefault();
+      // store hash
+      var hash = this.hash;
+      // move
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top - $navMenu.height()
+      }, 500, 'swing', function(){
+        //add hash to URl when finished scrolling
+        window.location.hash = hash;
+      } );
+      //close nav
+      if( openNav === true ){
+        closeNav();
+      }
+
+    });
         
   };
 
 
-  ////OPEN CLOSE NAVIGATION////
-  function navOpen(){
-    /*for( var i=0; i<navArr.length; i++ ){
-      navArr[i].position().top = $navMenu.height() * i;
-     //TweenLite.to(navArr[i], time - .3, {delay: 0, scrollTo: {y: i.height()}, ease:Expo.easeOut}, 0.2);
-    }*/
+  ////RANGE BETWEEN 2 NUMBERS FUNCTION
+  function rangeRad(a,b){
+    var min = Math.min.apply(Math, [a, b]);
+    var max = Math.max.apply(Math, [a, b]);
+    console.log('min ' + min + ' max '+max);
+    return this > min && this < max;
+  };
+
+
+  ////CLOSE NAVIGATION////
+  function closeNav(){
+    openNav = false;
+    $('#nav-hidden').animate({'margin-top': '-230px'}, 200, 'swing');
+    $('.overlay').css({'display':'none'});
+    $('body, html').css({'overflow':'scroll'});
+    console.log('menu-closed');
   };
 
 

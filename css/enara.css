@@ -108,8 +108,13 @@ img {
 
 
 /*NAVIGATION*/
+#nav-hidden {
+  margin: -230px 0 0 0;
+}
+
 .navTop {
-  background-color: #999;
+  background-color: #000;
+  color: #fff;
   display: inline-block;
   height: 45px;
   left: 0;
@@ -123,6 +128,14 @@ img {
   z-index: 100;
 }
 
+.navTop:hover {
+  background-color: #ff4719;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
 .nav ul {
   display: inline;
   left: 0;
@@ -134,19 +147,17 @@ img {
 }
 
 .nav li {
-  background-color: #999;
+  background-color: #efefef;
+  border-bottom: 1px solid #e5eaec;
   height: 45px;
   line-height: 45px;
   list-style: none;
   text-decoration: none;
 }
 
-.nav li:hover, .navMenu:hover {
-  background-color: #ff4719;
-}
-
-.nav-hidden {
-  margin: -500px 0 0 0 !important;
+.nav li:hover {
+  /*background-color: #ff4719;*/
+  color: #999;
 }
 
 .nav-pos {
@@ -154,6 +165,23 @@ img {
 }
 /*NAVIGATION END*/
 
+
+/* LOGO */
+.logo {
+  display: inline-block;
+  height: auto;
+  margin: 5px 0 -49px 0;
+  padding: 15px 0 15px 0;
+  position: relative;
+  width: 100%;
+}
+.logo-text {
+  color: #000;
+  font-family: 'Avenir Medium', Arial, sans-serif;
+  font-size: 100px;
+  text-align: center;
+}
+/* LOGO END */
 
 /* SITE */
 .outer-container {
@@ -199,6 +227,17 @@ img {
 .vid {
   display: inline-block;
   min-height: 323px;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+
+/* FOOTER */
+.footer {
+  background-color: #000;
+  display: inline-block;
+  height: 200px;
   margin: 0 auto;
   position: relative;
   width: 100%;
