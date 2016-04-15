@@ -92,8 +92,12 @@ var run = (function (){
     //TOUCH-SLIDER
     function touchSlider(){
       Slider = $('#slider').Swipe({
-        auto: 3000,
-        continuous: true
+        startSlide: 0,
+        speed: 800,
+        auto: 5000,
+        continuous: true,
+        disableScroll: false,
+        stopPropagation: false
       }).data('Swipe');
 
       $('.next').on('click', Slider.next);
