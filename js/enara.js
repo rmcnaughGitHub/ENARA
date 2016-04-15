@@ -17,7 +17,9 @@ var run = (function (){
     $navVideo = $('.navVideo'),
     $overlay = $('.overlay'),
     $navVideo = $('.navAudio'),
-    navArr = [$('.navAbout'),$('.navAudio'),$('.navVideo')];
+    navArr = [$('.navAbout'),$('.navAudio'),$('.navVideo')],
+    $pulseColor = $('.color-lerp');
+
 
     ////DETECT WINDOW SIZE////
     mobileSize = $(window).width() <= 667,
@@ -35,6 +37,7 @@ var run = (function (){
       //FIRE FUCTIONS
       mouseEvents();//mouse events
       touchSlider();//touch slider for image
+      //colorLerp();//color pulse
     };
 
 
@@ -104,6 +107,17 @@ var run = (function (){
       $('.prev').on('click', Slider.prev);
     }
         
+
+    //COLOR LERP
+    function colorLerp(){
+      if( openNav == true ){
+
+        $($pulseColor)
+        .animate( { backgroundColor: "#f00" }, 700 )
+        .animate( { backgroundColor: "#efefef" }, 700 );
+
+      } 
+    }//
 
 
     ////RANGE BETWEEN 2 NUMBERS FUNCTION
