@@ -50,8 +50,8 @@ var run = (function (){
             $('#nav-hidden').animate({'margin-top': '0'}, 200, 'swing');
             $('.overlay').css({'display':'block'});
             $('body, html').css({'overflow':'hidden'});
-            console.log('menu-open ' + ' openNav = ' +openNav);
             colorLerp();//color pulse
+            console.log('menu-open ' + ' openNav = ' +openNav);
           }else {
             openNav = false;
             $('#nav-hidden').animate({'margin-top': '-230px'}, 200, 'swing');
@@ -111,12 +111,20 @@ var run = (function (){
     function colorLerp(){
       //https://github.com/askupasoftware/color-rotator
       //http://products.askupasoftware.com/color-rotator/
-        colorFade.colorRotator({
-          colors: ['#ffff00','#efefef'],
-          property: 'background',
-          delay: 1100
-        });
-        console.log("lerp on"); 
+      colorFade.colorRotator({
+        colors: ['#ffff00','#efefef'],
+        property: 'background',
+        //easing: 'swing',
+        delay: 1100
+      });
+
+      if( openNav == true ){
+        colorFade.colorRotator('start');//start
+        console.log("color-lerp on");
+      }else{
+        colorFade.colorRotator('stop');//stop
+        console.log("color-lerp off");
+      }
     }
 
 
