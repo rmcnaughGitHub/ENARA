@@ -2,10 +2,12 @@ body {
   background-color: #fff;
   color: #000;
   font-family: 'Duru Sans', Arial, sans-serif;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 37px;
   margin: 0;
-  padding: 0; 
+  padding: 0;
+  /*smooth fonts*/
+  -webkit-font-smoothing: antialiased; 
 }
 
 div {
@@ -13,7 +15,8 @@ div {
 }
 
 h1 {
-  font-size: 36px;
+  font-family: 'Avenir Medium', Arial, sans-serif;
+  font-size: 20px;
   text-transform: uppercase; 
 }
 
@@ -90,6 +93,7 @@ img {
   cursor: pointer;
 }
 
+
 .overlay {
   bottom: 0;
   background-color: #000;
@@ -116,6 +120,7 @@ img {
   background-color: #000;
   color: #fff;
   display: inline-block;
+  font-family: 'Avenir Medium', Arial, sans-serif;
   height: 45px;
   left: 0;
   line-height: 45px;
@@ -133,6 +138,7 @@ img {
 }
 
 .nav a {
+  color: #000;
   text-decoration: none;
 }
 
@@ -170,7 +176,7 @@ img {
 .logo {
   display: inline-block;
   height: auto;
-  margin: 5px 0 -49px 0;
+  margin: 60px 0 -49px 0;
   padding: 15px 0 15px 0;
   position: relative;
   width: 100%;

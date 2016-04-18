@@ -16,9 +16,8 @@ var run = (function (){
     $navAudio = $('.navAudio'),
     $navVideo = $('.navVideo'),
     $overlay = $('.overlay'),
-    $navVideo = $('.navAudio'),
     navArr = [$('.navAbout'),$('.navAudio'),$('.navVideo')],
-    $pulseColor = $('.color-lerp');
+    colorFade = $('.color-lerp');
 
 
     ////DETECT WINDOW SIZE////
@@ -37,7 +36,6 @@ var run = (function (){
       //FIRE FUCTIONS
       mouseEvents();//mouse events
       touchSlider();//touch slider for image
-      //colorLerp();//color pulse
     };
 
 
@@ -52,13 +50,14 @@ var run = (function (){
             $('#nav-hidden').animate({'margin-top': '0'}, 200, 'swing');
             $('.overlay').css({'display':'block'});
             $('body, html').css({'overflow':'hidden'});
-            console.log('menu-open');
+            console.log('menu-open ' + ' openNav = ' +openNav);
+            colorLerp();//color pulse
           }else {
             openNav = false;
             $('#nav-hidden').animate({'margin-top': '-230px'}, 200, 'swing');
             $('.overlay').css({'display':'none'});
             $('body, html').css({'overflow':'scroll'});
-            console.log('menu-closed');
+            console.log('menu-closed ' + ' openNav = ' +openNav);
           }
       });
 
@@ -110,14 +109,15 @@ var run = (function (){
 
     //COLOR LERP
     function colorLerp(){
-      if( openNav == true ){
-
-        $($pulseColor)
-        .animate( { backgroundColor: "#f00" }, 700 )
-        .animate( { backgroundColor: "#efefef" }, 700 );
-
-      } 
-    }//
+      //https://github.com/askupasoftware/color-rotator
+      //http://products.askupasoftware.com/color-rotator/
+        colorFade.colorRotator({
+          colors: ['#ffff00','#efefef'],
+          property: 'background',
+          delay: 1100
+        });
+        console.log("lerp on"); 
+    }
 
 
     ////RANGE BETWEEN 2 NUMBERS FUNCTION
