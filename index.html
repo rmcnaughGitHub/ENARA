@@ -18,7 +18,7 @@
 
 <body>
 
-	<div class="outer-container"><!--outer-container-->
+	<div id="top" class="outer-container"><!--outer-container-->
 
 		<!--NAVIGATION-->
 			<div class="navTop cursor text-center">MENU</div>
@@ -81,13 +81,22 @@
 		<!--VIDEO-->
 		<div id="video" class="enara-text">
 			<h1 class="style-bold">videos</h1>
-			<div class="vid-container">
+			<!-- 0 -->
+			<div id='sliderVideo' class='touch-swipe'>
+			    <div class='touch-swipe-wrap'>
+			    	<div class="touch-swipe-image"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/Avu5CVv7QsM" frameborder="0" allowfullscreen></iframe></div>
+			        <div class="touch-swipe-image"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/KHYxLw1_9l0" frameborder="0" allowfullscreen></iframe></div>
+			    </div>
+			    <span class="nav prev"></span>
+				<span class="nav next"></span>
+			</div>
+			<!--<div class="vid-container">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Avu5CVv7QsM" frameborder="0" allowfullscreen></iframe>
 			</div>
 
 			<div class="vid-container">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/KHYxLw1_9l0" frameborder="0" allowfullscreen></iframe>
-			</div>
+			</div>-->
 		</div>
 
 
@@ -112,6 +121,13 @@
 
 		</div>
 
+		<!--BACK-TO-TOP-->
+		<div id="back-to-top" class="back-to-top-btn-container">
+			<a href="#top">
+				<div class="back-to-top-btn cursor"></div>
+			</a>
+		</div>
+
 
 		<!--JQUERY-->
 		<script src="js/jquery.min.js"></script>
@@ -121,8 +137,6 @@
 		<script type="text/javascript" src="js/enara.js"></script>
 
 		<script type="text/javascript">
-		//https://github.com/thebird/Swipe
-		//http://www.hongkiat.com/blog/jquery-swipe-slider/
 			$(document).ready(function(){
 
 				//get the number of `<script>` elements that have the correct `src` attribute

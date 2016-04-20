@@ -93,6 +93,29 @@ img {
   cursor: pointer;
 }
 
+.back-to-top-btn-container {
+  bottom: 10px;
+  display: none;
+  float: left;
+  height: auto;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 15;
+}
+
+.back-to-top-btn {
+  background: url("../img/back_to_top.png") no-repeat;
+  background-size: cover;
+  bottom: 10px;
+  display: inline-block;
+  float: right;
+  height: 50px;
+  margin: 0 10px 0 0;
+  opacity: .8;
+  width: 50px;
+}
+
 
 .overlay {
   bottom: 0;

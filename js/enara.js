@@ -17,7 +17,9 @@ var run = (function (){
     $navVideo = $('.navVideo'),
     $overlay = $('.overlay'),
     navArr = [$('.navAbout'),$('.navAudio'),$('.navVideo')],
-    colorFade = $('.color-lerp');
+    colorFade = $('.color-lerp'),
+    backtoTop = $('#back-to-top'),
+    backToTopFadeinPosition = 600;
 
 
     ////DETECT WINDOW SIZE////
@@ -35,7 +37,8 @@ var run = (function (){
     var setupElements = function(){
       //FIRE FUCTIONS
       mouseEvents();//mouse events
-      touchSlider();//touch slider for image
+      touchSliderImg();//touch slider for image
+      touchSliderVid();//touch slider for video
     };
 
 
@@ -77,23 +80,46 @@ var run = (function (){
         var hash = this.hash;
         // move
         $('html, body').animate({
-          scrollTop: $(hash).offset().top - $navMenu.height()
+          scrollTop: $(hash).offset().top -$navMenu.height()
         }, 500, 'swing', function(){
           //add hash to URl when finished scrolling
           window.location.hash = hash;
-        } );
+          //console.log('Window Position =  ' + $(window).scrollTop() + '  hash = ' + hash);
+        });
         //close nav
         if( openNav === true ){
           closeNav();
         }
 
       });
+
+      //BACK TO TOP BUTTON
+      backtoTop.on('click', function(e){
+        
+        e.preventDefault();
+        // store hash
+        var hash = this.hash;
+        // move
+        bodyScroll(0, 800, window.location.hash = hash);
+
+      });
           
     };
 
-    //TOUCH-SLIDER
-    function touchSlider(){
-      Slider = $('#slider').Swipe({
+    //SCROLL BODY AND HTML
+    function bodyScroll($element, $timeToScroll, $callBack){
+      $('html, body').animate({
+          scrollTop: $element
+        }, $timeToScroll, 'swing', function(){
+            $callBack;
+            console.log($callBack);
+        });
+          console.log('Window Position =  ' + $(window).scrollTop());
+    }
+
+    //TOUCH-SLIDER IMAGE
+    function touchSliderImg(){
+      imgSlider = $('#slider').Swipe({
         startSlide: 0,
         speed: 800,
         auto: 5000,
@@ -102,15 +128,25 @@ var run = (function (){
         stopPropagation: false
       }).data('Swipe');
 
-      $('.next').on('click', Slider.next);
-      $('.prev').on('click', Slider.prev);
+      $('.next').on('click', imgSlider.next);
+      $('.prev').on('click', imgSlider.prev);
+    };
+
+
+    //TOUCH-SLIDER VIDEO
+    function touchSliderVid(){
+      vidSlider = $('#sliderVideo').Swipe({
+        startSlide: 0,
+        speed: 800,
+      }).data('Swipe');
+
+      $('.next').on('click', vidSlider.next);
+      $('.prev').on('click', vidSlider.prev);
     }
         
 
     //COLOR LERP
     function colorLerp(){
-      //https://github.com/askupasoftware/color-rotator
-      //http://products.askupasoftware.com/color-rotator/
       colorFade.colorRotator({
         colors: ['#ffff00','#efefef'],
         property: 'background',
@@ -147,9 +183,21 @@ var run = (function (){
     };
 
 
+    ////SHOW/HIDE BACK TO TOP BUTTON
+    function showBackToTopButton(){
+      if( $(window).scrollTop() >= backToTopFadeinPosition){
+        backtoTop.css({'display':'inline-block'});
+      }else{
+        backtoTop.css({'display':'none'});
+      }
+      //console.log('Window Position =  ' + $(window).scrollTop());   
+    }
+
+
     ////DETECT USER SCROLL POSITION AND FIRE EVENTS////
     $(window).scroll(function(d, h){
-      //fade();
+      //watch back-to-top button
+      showBackToTopButton();
     });
 
 
