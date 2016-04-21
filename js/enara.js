@@ -40,7 +40,7 @@ var run = (function (){
       mouseEvents();//mouse events
       touchSliderImg();//touch slider for image
       touchSliderVid();//touch slider for video
-      touchSlider();
+      //touchSlider();//muliple slides with only one slide
     };
 
 
@@ -148,24 +148,10 @@ var run = (function (){
 
     //TOUCH-SLIDER All
     function touchSlider(){
-      /*var currentSliderId = $(this).find('.touch-swipe').attr('id');
+      var currentSliderId = $(this).find('.touch-swipe').attr('id');
       console.log("currentSliderId = "+currentSliderId);
-
-      var currentSliderControl = $('#' + currentSliderId).siblings('id');
-      console.log("currentSliderControl = "+currentSliderControl);
-
-      window[currentSliderId] = $('#' + currentSliderId).Swipe.data('Swipe');
-      window[currentSliderId].setup();
-
-      $('.prev', currentslidercontrol).click(function() {
-        window[currentSliderid].prev();
-      });
-      $('.next', currentslidercontrol).click(function() {
-          window[currentSliderid].next();
-      }); */
       
-      
-      /*$('.touch-swipe').each(function(index, element){
+      $('.touch-swipe').each(function(index, element){
           $(this).addClass('s'+index);
           var currentSliderId = index;
           var swipeArr = [],
@@ -196,8 +182,7 @@ var run = (function (){
           $('.prev').on('click', swipeArr[index].next);
           $('.next').on('click', swipeArr[index].prev);
           swipeArr[0].update();
-        });*/
-
+        });
 
     }
         
