@@ -6,6 +6,7 @@
 **Touch swipe
 a) //https://github.com/thebird/Swipe
 b) //http://www.hongkiat.com/blog/jquery-swipe-slider/
+c) //https://github.com/nolimits4web/Swiper/issues/273
 
 **Color Rotator
 a) //https://github.com/askupasoftware/color-rotator
