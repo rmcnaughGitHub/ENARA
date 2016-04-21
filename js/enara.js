@@ -19,7 +19,8 @@ var run = (function (){
     navArr = [$('.navAbout'),$('.navAudio'),$('.navVideo')],
     colorFade = $('.color-lerp'),
     backtoTop = $('#back-to-top'),
-    backToTopFadeinPosition = 600;
+    backToTopFadeinPosition = 600,// position for backtop button to fade in,
+
 
 
     ////DETECT WINDOW SIZE////
@@ -39,6 +40,7 @@ var run = (function (){
       mouseEvents();//mouse events
       touchSliderImg();//touch slider for image
       touchSliderVid();//touch slider for video
+      touchSlider();
     };
 
 
@@ -119,7 +121,7 @@ var run = (function (){
 
     //TOUCH-SLIDER IMAGE
     function touchSliderImg(){
-      imgSlider = $('#slider').Swipe({
+      var imgSlider = $('#slider').Swipe({
         startSlide: 0,
         speed: 800,
         auto: 5000,
@@ -135,13 +137,68 @@ var run = (function (){
 
     //TOUCH-SLIDER VIDEO
     function touchSliderVid(){
-      vidSlider = $('#sliderVideo').Swipe({
+      var vidSlider = $('#sliderVideo').Swipe({
         startSlide: 0,
         speed: 800,
       }).data('Swipe');
 
-      $('.next').on('click', vidSlider.next);
-      $('.prev').on('click', vidSlider.prev);
+      $('.nextVid').on('click', vidSlider.next);
+      $('.prevVid').on('click', vidSlider.prev);
+    }
+
+    //TOUCH-SLIDER All
+    function touchSlider(){
+      /*var currentSliderId = $(this).find('.touch-swipe').attr('id');
+      console.log("currentSliderId = "+currentSliderId);
+
+      var currentSliderControl = $('#' + currentSliderId).siblings('id');
+      console.log("currentSliderControl = "+currentSliderControl);
+
+      window[currentSliderId] = $('#' + currentSliderId).Swipe.data('Swipe');
+      window[currentSliderId].setup();
+
+      $('.prev', currentslidercontrol).click(function() {
+        window[currentSliderid].prev();
+      });
+      $('.next', currentslidercontrol).click(function() {
+          window[currentSliderid].next();
+      }); */
+      
+      
+      /*$('.touch-swipe').each(function(index, element){
+          $(this).addClass('s'+index);
+          var currentSliderId = index;
+          var swipeArr = [],
+            speedNum = 800,//Math.random(rangeRad(800,1000)),
+            autoNum = 5000;
+          
+          //fire function for multiple slides       
+          swipeArr[index] = $('.s' + index).Swipe({
+            startSlide: 0,
+            speed: speedNum,
+            auto: autoNum,
+            continuous: true,
+            disableScroll: false,
+            stopPropagation: false,
+            nextButton: index,
+            prevButton: index
+          }).data('Swipe');
+          //console.log('swipeArr[index] = ' + swipeArr[index]);
+
+          if( swipeArr[1] ){
+            autoNum = 0;
+            console.log('swipeArr[index] = ' + '.s' + index);
+            console.log('speedNum ' + speedNum);
+            console.log('autoNum ' + speedNum);
+            swipeArr[1].update();
+          }
+
+          $('.prev').on('click', swipeArr[index].next);
+          $('.next').on('click', swipeArr[index].prev);
+          swipeArr[0].update();
+        });*/
+
+
     }
         
 
@@ -190,7 +247,7 @@ var run = (function (){
       }else{
         backtoTop.css({'display':'none'});
       }
-      //console.log('Window Position =  ' + $(window).scrollTop());   
+      console.log('Window Position =  ' + $(window).scrollTop());   
     }
 
 

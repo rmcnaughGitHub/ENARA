@@ -299,14 +299,14 @@ img {
   min-height: 350px;
   width: 100%;*/ 
 }
-.touch-swipe .nav.next {
+.touch-swipe .nav.next, .nav.nextVid {
   background: url('../img/arrow-Right-white.png');
   height: 71px;
   opacity: .8;
   right: 0;
   width: 46px;
 }
-.touch-swipe .nav.prev {
+.touch-swipe .nav.prev, .nav.prevVid {
   background: url('../img/arrow-Left-white.png');
   height: 71px;
   left: 0;
