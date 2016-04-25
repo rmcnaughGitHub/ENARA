@@ -59,7 +59,7 @@ var run = (function (){
             console.log('menu-open ' + ' openNav = ' +openNav);
           }else {
             openNav = false;
-            $('#nav-hidden').animate({'margin-top': '-230px'}, 200, 'swing');
+            $('#nav-hidden').animate({'margin-top': '-266px'}, 200, 'swing');
             $('.overlay').css({'display':'none'});
             $('body, html').css({'overflow':'scroll'});
             console.log('menu-closed ' + ' openNav = ' +openNav);

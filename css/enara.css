@@ -131,12 +131,18 @@ img {
   width: 100%;
   z-index: 98;
 }
+
+.sound-cloud {
+  display: inline-block;
+  height: auto;
+  width: 100%;
+}
 /* UTILITY STYLES END */
 
 
 /*NAVIGATION*/
 #nav-hidden {
-  margin: -230px 0 0 0;
+  margin: -266px 0 0 0;
 }
 
 .navTop {
@@ -148,6 +154,7 @@ img {
   left: 0;
   line-height: 45px;
   margin: 0;
+  opacity: .9;
   padding: 0;
   position: fixed;
   text-decoration: none;
@@ -178,10 +185,10 @@ img {
 .nav li {
   background-color: #efefef;
   border-bottom: 1px solid #e5eaec;
-  font-weight: 900;
   height: 45px;
   line-height: 45px;
   list-style: none;
+  opacity: .95;
   text-decoration: none;
 }
 
@@ -191,7 +198,7 @@ img {
 }
 
 .nav-pos {
-  margin: 45px 0 0 0;
+  margin: 40px 0 0 0;
 }
 /*NAVIGATION END*/
 
