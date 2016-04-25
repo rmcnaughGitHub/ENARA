@@ -6,8 +6,8 @@ body {
   line-height: 37px;
   margin: 0;
   padding: 0;
-  /*smooth fonts*/
-  -webkit-font-smoothing: antialiased; 
+  /*smooth fonts
+  -webkit-font-smoothing: antialiased; */
 }
 
 div {
@@ -157,7 +157,7 @@ img {
 }
 
 .navTop:hover {
-  background-color: #ff4719;
+  background-color: #d20303;/*#ff4719;*/
 }
 
 .nav a {
@@ -178,6 +178,7 @@ img {
 .nav li {
   background-color: #efefef;
   border-bottom: 1px solid #e5eaec;
+  font-weight: 900;
   height: 45px;
   line-height: 45px;
   list-style: none;
