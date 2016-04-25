@@ -82,7 +82,7 @@ var run = (function (){
         var hash = this.hash;
         // move
         $('html, body').animate({
-          scrollTop: $(hash).offset().top -$navMenu.height()
+          scrollTop: $(hash).offset().top -( $navMenu.height() + $('.logo').height() ) 
         }, 500, 'swing', function(){
           //add hash to URl when finished scrolling
           window.location.hash = hash;
