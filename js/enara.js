@@ -75,7 +75,7 @@ var run = (function (){
       });
 
       ///SCROLL TO SECTIONS
-      $('a').on('click', function(e){
+      $('.page-scroll').on('click', function(e){
         
         e.preventDefault();
         // store hash
@@ -95,14 +95,14 @@ var run = (function (){
 
       });
 
-      //BACK TO TOP BUTTON
-      $('.back-to-top-btn').on('click', function(e){ 
-        e.preventDefault();
-        // store hash
-        var hash = this.hash;
-        // move
-        bodyScroll(0, 800, window.location.hash = hash);
-      });
+      ///ICON FADE EFFECT
+      $('.icon-fade').hover(function() {
+        $(this).stop().animate({'opacity':'0.5'}, 300);
+        },
+        function(){
+          $(this).stop().animate({'opacity':'1'}, 300);
+        }
+     );
           
     };
 

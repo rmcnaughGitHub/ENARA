@@ -369,6 +369,9 @@ img {
 
 /* FOOTER */
 .footer {
+  /*background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAATklEQVQYV2O0O3X+PwMDA8MhM0NGEI0LMBKtEJsJD27YgW1R
+    0DgEtwWrdUQrxGYLY8V5iDUdhghrKFOITfenmXFgW/jSF+H3DNEKsdkCAO99IAvSBrFVAAAAAElFTkSuQmCC);*/
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAFklEQVQIW2NkQAOM+ARmMjAwpGOoAAAVUgEFCCGTpwAAAABJRU5ErkJggg==);
   background-color: #fff;
   border-top: 1px solid #e5eaec;
   display: inline-block;
