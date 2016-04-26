@@ -20,9 +20,9 @@ h1 {
   text-transform: uppercase; 
 }
 h2 {
-  color: #ec6d28;
-  font-family: 'Duru Sans', Arial, sans-serif;
-  font-size: 16px;
+  color: #a69364; /*#ec6d28;*/
+  font-family: 'Avenir Medium', Arial, sans-serif;
+  font-size: 18px;
   text-transform: capitalize;
 }
 
@@ -99,6 +99,10 @@ img {
   cursor: pointer;
 }
 
+.italic-style{
+  font-style: italic;
+}
+
 .back-to-top-btn-container {
   bottom: 10px;
   display: none;
@@ -148,6 +152,9 @@ img {
   margin: 0;
   padding: 0;
   width: 100%;
+}
+.sound-cloud iframe  {
+  height: 150px;
 }
 /* UTILITY STYLES END */
 
