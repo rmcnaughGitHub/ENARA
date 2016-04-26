@@ -96,17 +96,17 @@ var run = (function (){
       });
 
       //BACK TO TOP BUTTON
-      $('.back-to-top-btn').on('click', function(e){
-        
+      $('.back-to-top-btn').on('click', function(e){ 
         e.preventDefault();
         // store hash
         var hash = this.hash;
         // move
         bodyScroll(0, 800, window.location.hash = hash);
-
       });
           
     };
+
+
 
     //SCROLL BODY AND HTML
     function bodyScroll($element, $timeToScroll, $callBack){

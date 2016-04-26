@@ -111,17 +111,21 @@ img {
 }
 
 .back-to-top-btn {
-  background: url("../img/back_to_top.png") no-repeat;
+  background: url("../img/back_to_top_full.png") no-repeat;
   background-size: cover;
   bottom: 10px;
   display: inline-block;
   float: right;
-  height: 50px;
+  height: 40px;
   margin: 0 10px 0 0;
   opacity: .8;
-  width: 50px;
+  width: 40px;
 }
 
+
+.back-to-top-btn:hover {
+  background-position: -40px 0;
+}
 
 .overlay {
   bottom: 0;
@@ -400,7 +404,8 @@ img {
   height: 32px;
   margin: 0 auto;
   position: relative;
-  width: 44%;
+  text-align: center;
+  width: 100%;
 }
 
 
