@@ -11,7 +11,7 @@ body {
 }
 
 div {
-  outline: 1px solid #f00;
+  /*outline: 1px solid #f00;*/
 }
 
 h1 {
@@ -384,14 +384,23 @@ img {
 }
 
 .footer-icon-container ul {
-  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-icon-container li {
+  display: inline-block;
   height: 32px;
   line-height: 32px;
   list-style: none;
-  padding: 0 0 0 10px;
+  padding: 0 20px 0 0;
+}
+
+.footer-icon-container-inside {
+  height: 32px;
+  margin: 0 auto;
+  position: relative;
+  width: 44%;
 }
 
 
