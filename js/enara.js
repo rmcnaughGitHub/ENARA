@@ -96,7 +96,7 @@ var run = (function (){
       });
 
       //BACK TO TOP BUTTON
-      backtoTop.on('click', function(e){
+      $('.back-to-top-btn').on('click', function(e){
         
         e.preventDefault();
         // store hash
@@ -195,6 +195,7 @@ var run = (function (){
         //easing: 'swing',
         delay: 1100
       });
+      colorFade.colorRotator('stop');//stop
 
       if( openNav == true ){
         colorFade.colorRotator('start');//start
