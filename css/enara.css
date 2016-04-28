@@ -20,9 +20,11 @@ h1 {
   text-transform: uppercase; 
 }
 h2 {
-  color: #a69364; /*#ec6d28;*/
+  /*background-color: #ccc;#d20303;*/
+  color: #a69364;/*#a69364; #ec6d28;*/
   font-family: 'Avenir Medium', Arial, sans-serif;
-  font-size: 18px;
+  font-size: 17px;
+  padding: 10px 0 0 0;
   text-transform: capitalize;
 }
 
@@ -100,9 +102,10 @@ img {
 }
 
 .italic-style{
-  font-style: italic;
+  /*font-style: italic;*/
 }
 
+/*BACK TO TOP BUTTON */
 .back-to-top-btn-container {
   bottom: 10px;
   display: none;
@@ -125,7 +128,6 @@ img {
   opacity: .8;
   width: 40px;
 }
-
 
 .back-to-top-btn:hover {
   background-position: -40px 0;
@@ -155,6 +157,10 @@ img {
 }
 .sound-cloud iframe  {
   height: 150px;
+}
+
+.about-us-padding{
+  padding: 10px 0 0 0;
 }
 /* UTILITY STYLES END */
 
@@ -295,6 +301,14 @@ img {
   margin: 0 auto;
   position: relative;
   width: 100%;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5eaec;
+}
+
+.border-top {
+  border-top: 1px solid #e5eaec;
 }
 
 
