@@ -52,16 +52,18 @@ var run = (function (){
           e.preventDefault();
           if( openNav == false ){
             openNav = true;
-            $('#nav-hidden').animate({'margin-top': '0'}, 200, 'swing');
+            $('#nav-hidden').animate({'margin-top': '5px'}, 200, 'swing');
             $('.overlay').css({'display':'block'});
             $('body, html').css({'overflow':'hidden'});
-            colorLerp();//color pulse
+            //colorLerp();//color pulse
+            fadeInDiv();//fade in div
             console.log('menu-open ' + ' openNav = ' +openNav);
           }else {
             openNav = false;
             $('#nav-hidden').animate({'margin-top': '-266px'}, 200, 'swing');
             $('.overlay').css({'display':'none'});
             $('body, html').css({'overflow':'scroll'});
+            fadeOutDiv();//fade in div
             console.log('menu-closed ' + ' openNav = ' +openNav);
           }
       });
@@ -106,7 +108,19 @@ var run = (function (){
           
     };
 
+    //FADE IN
+    function fadeInDiv(){
+      $('li.nav').each(function(i){
+        $(this).delay(50 * i ).animate({'opacity':'.95'}, 300);
+      });
+    }
 
+    //FADE OUT
+    function fadeOutDiv(){
+      $('li.nav').each(function(i){
+        $(this).delay(100 * i).animate({'opacity':'0'}, 500);
+      });
+    }
 
     //SCROLL BODY AND HTML
     function bodyScroll($element, $timeToScroll, $callBack){

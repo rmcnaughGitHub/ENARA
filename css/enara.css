@@ -172,6 +172,7 @@ img {
 
 .navTop {
   background-color: #000;
+  /*border-bottom: 1px solid #1a1a1a;*/
   color: #fff;
   display: inline-block;
   font-family: 'Avenir Medium', Arial, sans-serif;
@@ -193,7 +194,8 @@ img {
 }
 
 .nav a {
-  color: #000;
+  color: #fff;
+  font-size: 15px;
   text-decoration: none;
 }
 
@@ -208,18 +210,18 @@ img {
 }
 
 .nav li {
-  background-color: #efefef;
-  border-bottom: 1px solid #e5eaec;
+  background-color: #000;/*#efefef;*/
+  /*border-bottom: 1px solid #333;#e5eaec;*/
   height: 45px;
   line-height: 45px;
   list-style: none;
-  opacity: .95;
+  opacity: 0;
   text-decoration: none;
 }
 
 .nav li:hover {
   /*background-color: #ff4719;*/
-  color: #999;
+  color: #d20303;/*#999;*/
 }
 
 .nav-pos {
