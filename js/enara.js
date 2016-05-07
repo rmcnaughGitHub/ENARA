@@ -20,7 +20,7 @@ $(function () {
     colorFade = $('.color-lerp'),
     backtoTop = $('#back-to-top'),
     backToTopFadeinPosition = 600,// position for backtop button to fade in,
-    padOffset = 0,
+    paddingOffset = 0,
 
 
 
@@ -55,7 +55,6 @@ $(function () {
             $('.overlay').css({'display':'block'});
             $('.logo').css({'margin-top':'45px'});// this keeps moving/fixes position unsure why
             $('body, html').css({'overflow':'hidden'});
-            //colorLerp();//color pulse
             fadeInDiv();//fade in div
             console.log('menu-open ' + ' openNav = ' +openNav);
           }else {
@@ -77,15 +76,15 @@ $(function () {
 
         //padding offset
         if( mobileSize ) {
-          padOffset = 0;
+          paddingOffset = 0;
         }else {
-          padOffset = 8;
-          console.log('padOffset '+padOffset);
+          paddingOffset = 8;
+          console.log('paddingOffset '+paddingOffset);
         }
 
         // move
         $('html, body').animate({
-          scrollTop: $(hash).offset().top -( $navMenu.height() + $('.logo').height() + padOffset ) 
+          scrollTop: $(hash).offset().top -( $navMenu.height() + $('.logo').height() + paddingOffset ) 
         }, 500, 'swing', function(){
           //add hash to URl when finished scrolling
           window.location.hash = hash;
