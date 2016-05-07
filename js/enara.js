@@ -1,6 +1,4 @@
-/* jshint browser: true, jquery: true, unused: false, devel: true */
-/* globals TweenLite, Power4, Quint, Expo */
-var run = (function (){
+$(function (){
   //'use strict';
 
 	//DEFINE MODULE GLOBAL VARIABLES
@@ -30,12 +28,10 @@ var run = (function (){
 
 
     //INTITIALIZE
-    var init = function(){
-      setupElements();
-    };
+    setupElements();
 
     //SETUP ELEMENTS
-    var setupElements = function(){
+    function setupElements(){
       //FIRE FUCTIONS
       mouseEvents();//mouse events
       touchSliderImg();//touch slider for image
@@ -45,7 +41,7 @@ var run = (function (){
 
 
     ////MOUSE EVENTS////
-    var mouseEvents = function(){
+    function mouseEvents(){
 
       ///NAV MENU
       $('.navTop').on('click', function (e){
@@ -66,14 +62,6 @@ var run = (function (){
             fadeOutDiv();//fade in div
             console.log('menu-closed ' + ' openNav = ' +openNav);
           }
-      });
-
-      $('#myDiv').animate(
-      { opacity: 0 }, // what we are animating
-      'fast', // how fast we are animating
-      'swing', // the type of easing
-      function() { // the callback
-          alert('done');
       });
 
       ///SCROLL TO SECTIONS
@@ -122,17 +110,6 @@ var run = (function (){
       });
     }
 
-    //SCROLL BODY AND HTML
-    function bodyScroll($element, $timeToScroll, $callBack){
-      $('html, body').animate({
-          scrollTop: $element
-        }, $timeToScroll, 'swing', function(){
-            $callBack;
-            console.log($callBack);
-        });
-          console.log('Window Position =  ' + $(window).scrollTop());
-    }
-
     //TOUCH-SLIDER IMAGE
     function touchSliderImg(){
       var imgSlider = $('#slider').Swipe({
@@ -160,7 +137,7 @@ var run = (function (){
       $('.prevVid').on('click', vidSlider.prev);
     }
 
-    //TOUCH-SLIDER All
+    //TOUCH-SLIDER All-UNUSED
     function touchSlider(){
       var currentSliderId = $(this).find('.touch-swipe').attr('id');
       console.log("currentSliderId = "+currentSliderId);
@@ -247,7 +224,7 @@ var run = (function (){
       }else{
         backtoTop.css({'display':'none'});
       }
-      console.log('Window Position =  ' + $(window).scrollTop());   
+      //console.log('Window Position =  ' + $(window).scrollTop());   
     }
 
 
@@ -258,10 +235,5 @@ var run = (function (){
     });
 
 
-    return {
-      init: init
-    };
+});
 
-})();
-
-run.init(); //Run object

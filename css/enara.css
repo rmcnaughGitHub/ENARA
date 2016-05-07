@@ -102,12 +102,31 @@ img {
 }
 
 .italic-style{
-  /*font-style: italic;*/
+  font-style: italic;
+}
+
+.captions-text{
+  background-color: #000;
+  color: #fff;
+  display: block;
+  float: left;
+  font-size: 10px;
+  height: 30px;
+  margin: -18px 0 0 0;
+  padding: 0 15px 0 15px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.enara-text {
+  line-height: 20px;
+  font-size: 16px;
+  padding: 15px;
 }
 
 /*BACK TO TOP BUTTON */
 .back-to-top-btn-container {
-  bottom: 10px;
+  bottom: 30px;
   display: none;
   float: left;
   height: auto;
@@ -120,7 +139,6 @@ img {
 .back-to-top-btn {
   background: url("../img/back_to_top_full.png") no-repeat;
   background-size: cover;
-  bottom: 10px;
   display: inline-block;
   float: right;
   height: 40px;
@@ -267,12 +285,6 @@ img {
   margin: 0 auto;
   position: relative;
   width: 100%; 
-}
-
-.enara-text {
-  line-height: 20px;
-  font-size: 16px;
-  padding: 15px;
 }
 
 .hero-container{
