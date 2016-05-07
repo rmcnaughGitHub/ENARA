@@ -16,9 +16,10 @@ div {
 
 h1 {
   font-family: 'Avenir Medium', Arial, sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   text-transform: uppercase; 
 }
+
 h2 {
   /*background-color: #ccc;#d20303;*/
   color: #a69364;/*#a69364; #ec6d28;*/
@@ -26,6 +27,12 @@ h2 {
   font-size: 17px;
   padding: 10px 0 0 0;
   text-transform: capitalize;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
 }
 
 img {
@@ -124,6 +131,12 @@ img {
   padding: 15px;
 }
 
+.enara-text-h1 {
+  line-height: 20px;
+  margin: -1px 0 -7px 0;
+  padding: 0 15px 0 15px;
+}
+
 /*BACK TO TOP BUTTON */
 .back-to-top-btn-container {
   bottom: 30px;
@@ -142,7 +155,7 @@ img {
   display: inline-block;
   float: right;
   height: 40px;
-  margin: 0 10px 0 0;
+  margin: 0 20px 0 0;
   opacity: .8;
   width: 40px;
 }
@@ -185,7 +198,7 @@ img {
 
 /*NAVIGATION*/
 #nav-hidden {
-  margin: -266px 0 0 0;
+  margin: -300px 0 0 0;
 }
 
 .navTop {
@@ -252,9 +265,10 @@ img {
 .logo {
   background-color: #fff;
   border-bottom: 1px solid #ccc;
-  display: inline-block;
+  display: block;
+  float: left;
   height: 45px;
-  margin: 45px 0 0 0;
+  margin: -45px 0 0 0;
   padding: 6px 0 0 0;
   position: fixed;
   width: 100%;
@@ -272,17 +286,19 @@ img {
 /* SITE */
 .outer-container {
   display: block;
-  float: left;
   height: 100%;
   margin: 0 auto;
+  max-width: 900px;
   position: relative;
   width: 100%; 
 }
 
 .container {
-  display: inline-block;
+  display: block;
+  float: left;
   height: 100%;
   margin: 0 auto;
+  max-width: 900px;
   position: relative;
   width: 100%; 
 }
@@ -304,7 +320,7 @@ img {
   display: inline-block;
   min-height: 300px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0;
   position: relative;
   width: 100%;
 }
@@ -317,12 +333,29 @@ img {
   width: 100%;
 }
 
-.border-bottom {
+.border-bottom-style {
   border-bottom: 1px solid #e5eaec;
+  padding-bottom: 15px;
 }
 
-.border-top {
+.border-top-style {
   border-top: 1px solid #e5eaec;
+}
+
+.h1-padding-bottom {
+  padding-bottom: 15px !important;
+}
+
+.h1-padding-top {
+  padding-top: 15px !important;
+}
+
+.h1-margin-top {
+  margin-top: -15px !important;
+}
+
+.h1-margin-bottom {
+  margin-bottom: -15px !important;
 }
 
 
@@ -447,3 +480,46 @@ img {
 }
 
 
+
+/* DESKTOP */
+@media (min-width: 1200px) {
+
+  h1 {
+    font-family: 'Avenir Medium', Arial, sans-serif;
+    font-size: 17px;
+    text-transform: uppercase; 
+  }
+
+  .h1-margin-top {
+    margin-top: 0 !important;
+  }
+
+  .h1-margin-bottom {
+    margin-bottom: 0 !important;
+  }
+
+  .enara-text {
+    line-height: 23px;
+    font-size: 16px;
+    padding: 0px 0 15px 0;
+  }
+
+  .enara-text-h1 {
+    line-height: 20px;
+    font-size: 16px;
+    padding: 11px 0 0 0;
+  }
+
+  .border-bottom {
+    border-bottom: 1px solid #e5eaec;
+    padding-bottom: 15px;
+  }
+
+  .vid-container, iframe {
+    display: inline-block;
+    min-height: 510px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }

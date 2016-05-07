@@ -1,5 +1,6 @@
-$(function (){
-  //'use strict';
+$(function () {
+
+  'use strict';
 
 	//DEFINE MODULE GLOBAL VARIABLES
 	var time = 1,
@@ -13,11 +14,13 @@ $(function (){
     $navAbout = $('.navAbout'),
     $navAudio = $('.navAudio'),
     $navVideo = $('.navVideo'),
+    $logo = $('.logo'),
     $overlay = $('.overlay'),
     navArr = [$('.navAbout'),$('.navAudio'),$('.navVideo')],
     colorFade = $('.color-lerp'),
     backtoTop = $('#back-to-top'),
     backToTopFadeinPosition = 600,// position for backtop button to fade in,
+    padOffset = 0,
 
 
 
@@ -50,13 +53,14 @@ $(function (){
             openNav = true;
             $('#nav-hidden').animate({'margin-top': '5px'}, 200, 'swing');
             $('.overlay').css({'display':'block'});
+            $('.logo').css({'margin-top':'45px'});// this keeps moving/fixes position unsure why
             $('body, html').css({'overflow':'hidden'});
             //colorLerp();//color pulse
             fadeInDiv();//fade in div
             console.log('menu-open ' + ' openNav = ' +openNav);
           }else {
             openNav = false;
-            $('#nav-hidden').animate({'margin-top': '-266px'}, 200, 'swing');
+            $('#nav-hidden').animate({'margin-top': '-350px'}, 200, 'swing');
             $('.overlay').css({'display':'none'});
             $('body, html').css({'overflow':'scroll'});
             fadeOutDiv();//fade in div
@@ -70,14 +74,24 @@ $(function (){
         e.preventDefault();
         // store hash
         var hash = this.hash;
+
+        //padding offset
+        if( mobileSize ) {
+          padOffset = 0;
+        }else {
+          padOffset = 8;
+          console.log('padOffset '+padOffset);
+        }
+
         // move
         $('html, body').animate({
-          scrollTop: $(hash).offset().top -( $navMenu.height() + $('.logo').height() ) 
+          scrollTop: $(hash).offset().top -( $navMenu.height() + $('.logo').height() + padOffset ) 
         }, 500, 'swing', function(){
           //add hash to URl when finished scrolling
           window.location.hash = hash;
           //console.log('Window Position =  ' + $(window).scrollTop() + '  hash = ' + hash);
         });
+
         //close nav
         if( openNav === true ){
           closeNav();
@@ -210,7 +224,7 @@ $(function (){
     ////CLOSE NAVIGATION////
     function closeNav(){
       openNav = false;
-      $('#nav-hidden').animate({'margin-top': '-230px'}, 200, 'swing');
+      $('#nav-hidden').animate({'margin-top': '-350px'}, 200, 'swing');
       $('.overlay').css({'display':'none'});
       $('body, html').css({'overflow':'scroll'});
       console.log('menu-closed');
