@@ -53,7 +53,7 @@ $(function () {
             openNav = true;
             $('#nav-hidden').animate({'margin-top': '5px'}, 200, 'swing');
             $('.overlay').css({'display':'block'});
-            $('.logo').css({'margin-top':'45px'});// this keeps moving/fixes position unsure why
+            //$('.logo').css({'margin-top':'45px'});// this keeps moving/fixes position unsure why
             $('body, html').css({'overflow':'hidden'});
             fadeInDiv();//fade in div
             console.log('menu-open ' + ' openNav = ' +openNav);

@@ -11,7 +11,7 @@ body {
 }
 
 div {
-  /*outline: 1px solid #f00;*/
+  outline: 1px solid #f00;
 }
 
 h1 {
@@ -133,7 +133,7 @@ img {
 
 .enara-text-h1 {
   line-height: 20px;
-  padding: 15px 0 0 0;
+  padding: 15px 15px 0 15px;
 }
 
 /*BACK TO TOP BUTTON */
@@ -267,7 +267,7 @@ img {
   display: block;
   float: left;
   height: 45px;
-  margin: -45px 0 0 0;
+  margin: 45px 0 0 0;
   padding: 6px 0 0 0;
   position: fixed;
   width: 100%;
@@ -303,6 +303,8 @@ img {
 }
 
 .hero-container{
+  display: block;
+  float: left;
   margin: 90px 0 0 0;
 }
 
@@ -362,7 +364,7 @@ img {
 .touch-swipe {
   overflow: hidden;
   position: relative;
-  max-width: 1200px;
+  max-width: 900px;
   width: 100%;
   height: auto;
   margin: 0 auto;

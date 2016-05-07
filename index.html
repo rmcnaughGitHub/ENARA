@@ -215,6 +215,10 @@
 	<script src="js/colorrotator.min.js"></script>
 	<script type="text/javascript" src="js/enara.js"></script>
 
+	<!--PRE-LOAD-IMAGES-->
+	<!--http://www.inwebson.com/jquery/jpreloader-a-preloading-screen-to-preload-images/-->
+	<script type="text/javascript" src="js/preloader/jpreloader.js"></script>
+
 	<script type="text/javascript">
 		$(document).ready(function(){
 
@@ -228,6 +232,14 @@
 			if (len === 0) {
 			    //$.getScript('<external JS>');
 			}*/
+
+			//PRELOAD IMAGES
+			$('#slider').jpreLoader({
+				'showSplash': 'false',
+				'showPercentage': 'false',
+				'onetimeLoad': 'true',
+				'debugMode': 'true'			
+			});
 
 		});
 	</script>
