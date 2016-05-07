@@ -11,7 +11,7 @@ body {
 }
 
 div {
-  outline: 1px solid #f00;
+  /*outline: 1px solid #f00;*/
 }
 
 h1 {
@@ -262,7 +262,13 @@ img {
 
 /* LOGO */
 .logo {
-  background-color: #fff;
+  /*background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAFklEQVQIW2NkQAOM+ARmMjAwpGOoAAAVUgEFCCGTpwAAAABJRU5ErkJggg==);*/
+  /*background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAASklEQVQYV2NkYGAwZmBgOMuAACA+CKCIMSIpADGRNaEYgKwQ3WQUjTCFMEXYTASLgRQS7UaiFSK7Ba/VMI8T5RlsijGChxg3MgAAqXUYpEMrs6AAAAAASUVORK5CYII=);*/
+  /*background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAa0lEQVQYV2NkgIJf/Pz/2T5+ZARxjTOv/T/SEsHAKXwJzgczCCk6O12LkZEYRSDDwCbisg5kEsxGnG5CVgRyOyM2h6MrAlv9/a3ef2TfYVMEMgzFjbgU7aptgXgGpAOfImGpZRA3ElIEMgwACpJ/ML90PU0AAAAASUVORK5CYII=);*/
+  /*background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAaklEQVQYV2NkQID/DAwMjCCucea1/0daIhg4hS/B+WAGAwMDXkVnp2sxghQSVAQyCWYiVutAJsFsxOkmZEUgAxmxORxdEdjq72/1/iP7DpsikGEobsSlaFdtCyLc8CkSlloGcSMhRSA3AgASpWMY97bRpwAAAABJRU5ErkJggg==);*/
+  /*background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAWklEQVQYV2NkQID/DAwMjDDu97d6/zmFL8H5MAZeRSDNIIUEFcEUwi1/+yzqv7DUMrh1yM7C6SZ0t4MVojscmwcZiVGE4UZcQQVyO1aHI4cnzIPoClGCCjkUAKBwMTasJykRAAAAAElFTkSuQmCC);*/
+  /*background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAATElEQVQYV2NkQID/DAwMjDDu61uv/4uqicL5MAZeRSDNIIUEFcEUwi1Htw7ZWTjdhO52sEJ8JsE8yEiMIgw34gsquBsJhSe6QpxBBQDgUDG5mFgTrAAAAABJRU5ErkJggg==);*/
+  background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAUElEQVQYV2NkgIKenp7/JSUljDD+61uv/4uqicL5YAYhRSA1jMQoAiuEWQWi0a1DdhZON6G7HawQn0kwDzISowjDjfiCCsUz+IIKRSG+oAIAcz1OXT05E+gAAAAASUVORK5CYII=);
   border-bottom: 1px solid #ccc;
   display: block;
   float: left;
@@ -306,6 +312,7 @@ img {
   display: block;
   float: left;
   margin: 90px 0 0 0;
+  width: 100%;
 }
 
 .hero-image {
@@ -364,7 +371,6 @@ img {
 .touch-swipe {
   overflow: hidden;
   position: relative;
-  max-width: 900px;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -505,15 +511,18 @@ img {
     padding: 0px 0 15px 0;
   }
 
-  /*.enara-text-h1 {
-    line-height: 20px;
+  .enara-text-h1 {
     font-size: 16px;
-    padding: 11px 0 0 0;
-  }*/
+    padding: 15px 0 0 0;
+  }
 
   .border-bottom {
     border-bottom: 1px solid #e5eaec;
     padding-bottom: 15px;
+  }
+
+  .touch-swipe {
+    max-width: 900px;
   }
 
   .vid-container, iframe {
